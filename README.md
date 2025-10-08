@@ -15,13 +15,6 @@ This project follows the **Medallion Architecture** (Bronze, Silver, Gold):
 - **Silver Layer** → Cleansed, standardized, and transformed data.  
 - **Gold Layer** → Business-ready data modeled into **star schema** for analytics & reporting.  
 
-```mermaid
-flowchart TD
-    A[CSV Files (ERP + CRM)] --> B[Bronze Layer: Raw Data]
-    B --> C[Silver Layer: Cleaned & Standardized Data]
-    C --> D[Gold Layer: Star Schema (Fact + Dimensions)]
-    D --> E[Analytics & BI Reports]
-```
 
 ---
 
