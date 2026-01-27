@@ -14,16 +14,16 @@ Stores customer master data enriched with demographic and geographic attributes 
 
 | Column Name     | Data Type    | Description |
 |-----------------|--------------|-------------|
-| customer_key    | INT          | Surrogate key uniquely identifying each customer record in the dimension table. |
-| customer_id     | INT          | Business identifier assigned to the customer in the source system. |
-| customer_number | NVARCHAR(50) | Alphanumeric customer reference used for tracking and reporting. |
-| first_name      | NVARCHAR(50) | Customer’s first name. |
-| last_name       | NVARCHAR(50) | Customer’s last name or family name. |
-| country         | NVARCHAR(50) | Country of residence (e.g., Australia). |
-| marital_status  | NVARCHAR(50) | Marital status of the customer (e.g., Married, Single). |
-| gender          | NVARCHAR(50) | Gender of the customer (e.g., Male, Female, n/a). |
-| birthdate       | DATE         | Date of birth in YYYY-MM-DD format. |
-| create_date     | DATE         | Date when the customer record was created in the system. |
+| Customer_Key    | INT          | Surrogate key uniquely identifying each customer record in the dimension table. |
+| Customer_Id     | INT          | Business identifier assigned to the customer in the source system. |
+| Customer_Number | NVARCHAR(50) | Alphanumeric customer reference used for tracking and reporting. |
+| First_Name      | NVARCHAR(50) | Customer’s first name. |
+| Last_Name       | NVARCHAR(50) | Customer’s last name or family name. |
+| Country         | NVARCHAR(50) | Country of residence (e.g., Australia). |
+| Marital_Status  | NVARCHAR(50) | Marital status of the customer (e.g., Married, Single). |
+| Gender          | NVARCHAR(50) | Gender of the customer (e.g., Male, Female, n/a). |
+| Birthdate       | DATE         | Date of birth in YYYY-MM-DD format. |
+| Create_Date     | DATE         | Date when the customer record was created in the system. |
 
 ---
 
@@ -35,17 +35,17 @@ Contains product master data with classification and lifecycle attributes.
 
 | Column Name           | Data Type    | Description |
 |-----------------------|--------------|-------------|
-| product_key           | INT          | Surrogate key uniquely identifying each product record. |
-| product_id            | INT          | Business identifier assigned to the product in the source system. |
-| product_number        | NVARCHAR(50) | Alphanumeric product code used for inventory and categorization. |
-| product_name          | NVARCHAR(50) | Descriptive product name including key attributes. |
-| category_id           | NVARCHAR(50) | Identifier representing the product category. |
-| category              | NVARCHAR(50) | High-level product classification (e.g., Bikes, Components). |
-| subcategory           | NVARCHAR(50) | Detailed product classification within the category. |
-| maintenance_required  | NVARCHAR(50) | Indicates whether the product requires maintenance (Yes/No). |
-| cost                  | INT          | Base cost of the product. |
-| product_line          | NVARCHAR(50) | Product line or series (e.g., Road, Mountain). |
-| start_date            | DATE         | Date when the product became available for sale or use. |
+| Product_Key           | INT          | Surrogate key uniquely identifying each product record. |
+| Product_Id            | INT          | Business identifier assigned to the product in the source system. |
+| Product_Number        | NVARCHAR(50) | Alphanumeric product code used for inventory and categorization. |
+| Product_Name          | NVARCHAR(50) | Descriptive product name including key attributes. |
+| Category_Id           | NVARCHAR(50) | Identifier representing the product category. |
+| Category              | NVARCHAR(50) | High-level product classification (e.g., Bikes, Components). |
+| SubCategory           | NVARCHAR(50) | Detailed product classification within the category. |
+| Maintenance           | NVARCHAR(50) | Indicates whether the product requires maintenance (Yes/No). |
+| Cost                  | INT          | Base cost of the product. |
+| Product_Line          | NVARCHAR(50) | Product line or series (e.g., Road, Mountain). |
+| Start_Date            | DATE         | Date when the product became available for sale or use. |
 
 ---
 
@@ -60,12 +60,12 @@ One row per **product per sales order**.
 
 | Column Name     | Data Type    | Description |
 |-----------------|--------------|-------------|
-| order_number    | NVARCHAR(50) | Unique identifier for the sales order (e.g., SO54496). |
-| product_key     | INT          | Surrogate key referencing gold.dim_products. |
-| customer_key    | INT          | Surrogate key referencing gold.dim_customers. |
-| order_date      | DATE         | Date when the order was placed. |
-| shipping_date   | DATE         | Date when the order was shipped. |
-| due_date        | DATE         | Date when payment for the order was due. |
-| sales_amount    | INT          | Total sales value for the line item. |
-| quantity        | INT          | Number of units sold for the line item. |
-| price           | INT          | Unit price of the product at the time of sale. |
+| Order_Number    | NVARCHAR(50) | Unique identifier for the sales order (e.g., SO54496). |
+| Product_Key     | INT          | Surrogate key referencing gold.dim_products. |
+| Customer_Key    | INT          | Surrogate key referencing gold.dim_customers. |
+| Order_Date      | DATE         | Date when the order was placed. |
+| Shipping_Date   | DATE         | Date when the order was shipped. |
+| Due_Date        | DATE         | Date when payment for the order was due. |
+| Sales_Amount    | INT          | Total sales value for the line item. |
+| Quantity        | INT          | Number of units sold for the line item. |
+| Price           | INT          | Unit price of the product at the time of sale. |
