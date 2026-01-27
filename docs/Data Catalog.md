@@ -21,7 +21,7 @@ Stores customer master data enriched with demographic and geographic attributes 
 | Last_Name       | NVARCHAR(50) | Customer’s last name or family name. |
 | Country         | NVARCHAR(50) | Country of residence (e.g., Australia). |
 | Marital_Status  | NVARCHAR(50) | Marital status of the customer (e.g., Married, Single). |
-| Gender          | NVARCHAR(50) | Gender of the customer (e.g., Male, Female, n/a). |
+| Gender          | NVARCHAR(50) | Gender of the customer (e.g., Male, Female, NA). |
 | Birthdate       | DATE         | Date of birth in YYYY-MM-DD format. |
 | Create_Date     | DATE         | Date when the customer record was created in the system. |
 
